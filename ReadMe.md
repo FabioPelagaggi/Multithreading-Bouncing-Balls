@@ -1,0 +1,2 @@
+This software was developed to demonstrate, in a visual way, the functioning of multithreading in Python. Recommended using process management tools, such as ProcessExplorer, to better visualize the behavior of threads in the system.
+The software creates a thread to processes the ball movement of each ball by demand. Therefore, creating multiples threads that can be observed.

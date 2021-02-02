@@ -1,1 +1,0 @@
-This software was developed to demonstrate, in a visual way, the functioning of multithreading in Python. It is advisable to use process management tools, such as ProcessExplorer, to better visualize the operation of the threads in the software process.
