@@ -1,4 +1,4 @@
-import pygame, threading
+import pygame, threading, time
 import interface, func
 
 def main():
@@ -23,10 +23,9 @@ def main():
                 pos = pygame.mouse.get_pos()
                 if interface.button_add_thread.collidepoint((pos[0], pos[1] - interface.DISP_THREAD_HEIGHT_BORDER)):
                     func.make_ball()
-                #elif interface.button_add_x10_thread.collidepoint((pos[0], pos[1] - interface.DISP_THREAD_HEIGHT_BORDER)):
-                    #for _ in range(10):
-                        #thread_make_ball = threading.Thread(target=func.make_ball)
-                        #thread_make_ball.start()
+                elif interface.button_add_x10_thread.collidepoint((pos[0], pos[1] - interface.DISP_THREAD_HEIGHT_BORDER)):
+                    for _ in range(10):
+                        func.make_ball()
                 elif interface.button_remove_thread.collidepoint((pos[0], pos[1] - interface.DISP_THREAD_HEIGHT_BORDER)):
                     if len(func.balls) > 0:
                         func.balls.pop(-1)
@@ -43,9 +42,9 @@ def main():
             elif event.type == pygame.KEYDOWN:
                 if event.key == pygame.K_SPACE:
                     func.make_ball()
-                #if event.key == pygame.K_x:
-                    #for _ in range(10):
-                        #func.make_ball()
+                if event.key == pygame.K_x:
+                    for _ in range(10):
+                        func.make_ball()
                 if event.key == pygame.K_DELETE:
                     if len(func.balls) > 0:
                         func.balls.pop(-1)

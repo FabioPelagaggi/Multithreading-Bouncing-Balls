@@ -84,11 +84,11 @@ def menu_buttons():
     pygame.draw.circle(s_buttons, dark_grey, [47, 70], 30)
     button_add_thread = pygame.draw.circle(s_buttons, light_grey_2, [47, 70], 25)
 
-    #text_button_add = "Add x10"
-    #text_button_add_render = font_3.render(text_button_add, 10, black)
-    #s_buttons.blit(text_button_add_render, (20, 120))
-    #pygame.draw.circle(s_buttons, dark_grey, [47, 170], 30)
-    #button_add_x10_thread = pygame.draw.circle(s_buttons, light_grey_2, [47, 170], 25)
+    text_button_add = "Add x10"
+    text_button_add_render = font_3.render(text_button_add, 10, black)
+    s_buttons.blit(text_button_add_render, (20, 120))
+    pygame.draw.circle(s_buttons, dark_grey, [47, 170], 30)
+    button_add_x10_thread = pygame.draw.circle(s_buttons, light_grey_2, [47, 170], 25)
 
     text_button_remove = "Remove"
     text_button_remove_render = font_3.render(text_button_remove, 10, black)
@@ -113,10 +113,17 @@ def menu_buttons():
     window.blit(s_buttons_border, (0, DISP_THREAD_HEIGHT_BORDER))
     window.blit(s_buttons, (5, DISP_THREAD_HEIGHT_BORDER))
 
-    return button_add_thread, button_remove_thread, button_remove_all_thread, button_close
+    return button_add_thread, button_add_x10_thread, button_remove_thread, button_remove_all_thread, button_close
+    # return button_add_thread, button_remove_thread, button_remove_all_thread, button_close
 
 button_add_thread = menu_buttons()[0]
-#button_add_x10_thread = menu_buttons()[1]
-button_remove_thread = menu_buttons()[1]
-button_remove_all_thread = menu_buttons()[2]
-button_close = menu_buttons()[3]
+button_add_x10_thread = menu_buttons()[1]
+button_remove_thread = menu_buttons()[2]
+button_remove_all_thread = menu_buttons()[3]
+button_close = menu_buttons()[4]
+
+# button_add_thread = menu_buttons()[0]
+# # button_add_x10_thread = menu_buttons()[1]
+# button_remove_thread = menu_buttons()[1]
+# button_remove_all_thread = menu_buttons()[2]
+# button_close = menu_buttons()[3]
