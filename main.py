@@ -24,8 +24,8 @@ def main():
                 if interface.button_add_thread.collidepoint((pos[0], pos[1] - interface.DISP_THREAD_HEIGHT_BORDER)):
                     func.make_ball()
                 elif interface.button_add_x10_thread.collidepoint((pos[0], pos[1] - interface.DISP_THREAD_HEIGHT_BORDER)):
-                    for _ in range(10):
-                        func.make_ball()
+                    ten_balls_thread = threading.Thread(target=func.make_ten_balls)
+                    ten_balls_thread.start()
                 elif interface.button_remove_thread.collidepoint((pos[0], pos[1] - interface.DISP_THREAD_HEIGHT_BORDER)):
                     if len(func.balls) > 0:
                         func.balls.pop(-1)

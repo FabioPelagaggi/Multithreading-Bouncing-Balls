@@ -24,6 +24,11 @@ def make_ball():
     ball.color = (random.randint(0,255),random.randint(0,255),random.randint(0,255))
     balls.append(ball)
 
+def make_ten_balls():
+    for _ in range(10):
+        make_ball()
+        time.sleep(0.05)
+
 class threads_balls(threading.Thread):
     
     def run(self):
