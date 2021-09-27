@@ -114,16 +114,9 @@ def menu_buttons():
     window.blit(s_buttons, (5, DISP_THREAD_HEIGHT_BORDER))
 
     return button_add_thread, button_add_x10_thread, button_remove_thread, button_remove_all_thread, button_close
-    # return button_add_thread, button_remove_thread, button_remove_all_thread, button_close
 
 button_add_thread = menu_buttons()[0]
 button_add_x10_thread = menu_buttons()[1]
 button_remove_thread = menu_buttons()[2]
 button_remove_all_thread = menu_buttons()[3]
 button_close = menu_buttons()[4]
-
-# button_add_thread = menu_buttons()[0]
-# # button_add_x10_thread = menu_buttons()[1]
-# button_remove_thread = menu_buttons()[1]
-# button_remove_all_thread = menu_buttons()[2]
-# button_close = menu_buttons()[3]
